@@ -1,4 +1,1 @@
-const frame = document.querySelector("#frame")
-function myfunction(a){
-   frame.src = "./Assignment-0"+a+"/"
-}
+function myfunction(a){document.querySelector("#frame").src = "./Assignment-0"+a+"/"}
