@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Transformation</title>
+    <style>
+        body {
+            display: grid;
+            place-items: center;
+        }
+
+        .container {
+            min-height: 50vh;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            height: 3.2rem;
+            width: 100%;
+            font-size: 3rem;
+            color: red;
+            background-color: aliceblue;
+            border: 1px solid black;
+        }
+
+        input {
+            font-size: 2rem;
+            padding: 0 10px;
+            border: 1px solid black;
+            outline: none;
+        }
+
+        button {
+            background-color: blueviolet;
+            color: white;
+            border: 3px solid rgb(217, 217, 244);
+            outline: none;
+            padding: 10px 0;
+            cursor: pointer;
+            width: 400px;
+            height: 50px;
+        }
+
+        button:hover {
+            opacity: .8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <label style="text-align:center;" for="show" id="label"></label>
+        <input id="text" type="text" value="">
+        <button id="up">Length</button>
+        <button id="low">Char Count</button>
+        <button id="sen">Space Cound</button>
+        <button id="tog">Reverse</button>
+    </div>
+
+    <script>
+        const label = document.querySelector('#label')
+        const text = document.querySelector('#text')
+        const up = document.querySelector('#up')
+        const low = document.querySelector('#low')
+        const ser = document.querySelector('#sen')
+        const tog = document.querySelector('#tog')
+
+        up.addEventListener('click', () => {
+            label.innerHTML = text.value.length
+        })
+        low.addEventListener('click', () => {
+            let t = text.value
+            t = t.replaceAll(' ', "")
+            label.innerHTML = t.length
+        })
+        ser.addEventListener('click', () => {
+            let t = text.value
+            count = 0
+            for (i = 0; i < t.length; i++) {
+                if (t.charAt(i) == ' ') {
+                    count++
+                }
+            }
+            label.innerHTML = count
+        })
+        tog.addEventListener('click', () => {
+            function reverseString(str) {
+                return (str === '') ? '' : reverseString(str.substr(1)) + str.charAt(0);
+            }
+            label.innerHTML = reverseString(text.value);
+        })
+    </script>
+</body>
+
+</html>

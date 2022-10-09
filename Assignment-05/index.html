@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Transformation</title>
+    <style>
+        body {
+            display: grid;
+            place-items: center;
+        }
+
+        .container {
+            min-height: 50vh;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            height: 3.2rem;
+            width: 100%;
+            font-size: 3rem;
+            color: red;
+            background-color: aliceblue;
+            border: 1px solid black;
+        }
+
+        input {
+            font-size: 2rem;
+            padding: 0 10px;
+            border: 1px solid black;
+            outline: none;
+        }
+
+        button {
+            background-color: blueviolet;
+            color: white;
+            border: 3px solid rgb(217, 217, 244);
+            outline: none;
+            padding: 10px 0;
+            cursor: pointer;
+            width: 400px;
+            height: 50px;
+        }
+
+        button:hover {
+            opacity: .8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <label style="text-align:center;" for="show" id="label"></label>
+        <input id="text" type="text" value="">
+        <button id="up">UPPERCASE</button>
+        <button id="low">lowercase</button>
+        <button id="tog">Title Case</button>
+        <button id="sen">Capitalize</button>
+    </div>
+
+    <script>
+        const label = document.querySelector('#label')
+        const text = document.querySelector('#text')
+        const up = document.querySelector('#up')
+        const low = document.querySelector('#low')
+        const ser = document.querySelector('#sen')
+        const tog = document.querySelector('#tog')
+        up.addEventListener('click', () => {
+            label.style.textTransform = 'none'
+            label.innerHTML = text.value.toUpperCase()
+        })
+        low.addEventListener('click', () => {
+            label.style.textTransform = 'none'
+            label.innerHTML = text.value.toLowerCase()
+        })
+        ser.addEventListener('click', () => {
+            label.style.textTransform = 'none'
+            label.style.textTransform = "capitalize";
+        })
+        tog.addEventListener('click',
+            () => {
+                label.style.textTransform = 'none'
+                str = text.value
+                str = str.toLowerCase().split(' ');
+                for (var i = 0; i < str.length; i++) {
+                    str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+                }
+                label.innerHTML =  str.join(' ');
+            })
+    </script>
+</body>
+
+</html>
