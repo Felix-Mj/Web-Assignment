@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        .row{
+            display: flex;
+            gap: 20px;
+            max-width: 500px;
+            align-items: center;
+        }
+       .row p{
+            float: left;
+        }
+    </style>
+<body>
+
+    <h2>Grouping Form Data with Fieldset</h2>
+
+    <p>The fieldset element is used to group related data in a form, and the legend element defines a caption for the
+        fieldset element.</p>
+
+    <form>
+        <fieldset>
+            <legend>Personalia:</legend>
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value=""><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value=""><br><br>
+            <label for="cars">Choose a car:</label>
+            <label for="cars">Choose a car:</label>
+            <select style="width: 400px;" id="cars" name="cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="fiat">Fiat</option>
+                <option value="audi">Audi</option>
+            </select><br><br>
+
+            <label for="cars">Choose a car:</label>
+            <select style="width: 400px;" id="cars" name="cars" size="2" multiple>
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="fiat">Fiat</option>
+                <option value="audi">Audi</option>
+            </select> <br><br>
+            <textarea name="message" rows="10" cols="30"></textarea>
+            <br><br>
+            <div class="inputs">
+                <div class="row">
+                    <p>checkbox :</p> <input type="checkbox"> <br>
+                </div>
+                <div class="row">
+                    <p>color :</p> <input type="color"> <br>
+                </div>
+                <div class="row">
+                    <p>date :</p> <input type="date"> <br>
+                </div>
+                <div class="row">
+                    <p>date-time</p><input type="datetime-local"> <br>
+                </div>
+                <div class="row">
+                    <p>email :</p> <input type="email"> <br>
+                </div>
+                <div class="row">
+                    <p>file :</p> <input type="file"> <br>
+                </div>
+                <div class="row">
+                    <p>month :</p> <input type="month"> <br>
+                </div>
+                <div class="row">
+                    <p>number :</p> <input type="number"> <br>
+                </div>
+                <div class="row">
+                    <p>password :</p> <input type="password"> <br>
+                </div>
+                <div class="row">
+                    <p>radio :</p> <input type="radio"> <br>
+                </div>
+                <div class="row">
+                    <p>range :</p> <input type="range"> <br>
+                </div>
+                <div class="row">
+                    <p>reset :</p> <input type="reset"> <br>
+                </div>
+                <div class="row">
+                    <p>search :</p> <input type="search"> <br>
+                </div>
+                <div class="row">
+                    <p>telephone :</p> <input type="tel"> <br>
+                </div>
+                <div class="row">
+                    <p>time :</p> <input type="time"> <br>
+                </div>
+                <div class="row">
+                    <p>url :</p> <input type="url"> <br>
+                </div>
+                <div class="row">
+                    <p>week :</p> <input type="week"> <br>
+                </div>
+            </div>
+            <input id="submit" type="submit" value="Submit">
+        </fieldset>
+    </form>
+    <script>
+        const submit = document.querySelector('#submit')
+        submit.addEventListener('click', () => {
+            alert(fname.value + " " + lname.value)
+        })
+    </script>
+</body>
+
+</html>

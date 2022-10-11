@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>ForVote</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>FOR- <span>VoTe</span></h1>
+      <div class="inputype">
+        <span>Enter Your name </span>
+        <input id="name" type="text" /> <br />
+        <span>Enter your age </span>
+        <input id="age" type="text" /> <br />
+        <span>Show the result </span>
+        <input id="show" readonly type="text" /> <br>
+        <button id="btn" >Summit</button>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("btn").onclick=function(){
+        var name = document.querySelector("#name").value
+        var age = document.querySelector("#age").value
+        document.querySelector("#show").value= name + "  " + age
+        var boole = confirm("are u happy ?")
+      }
+       setTimeout(alert(boole),5000)
+     
+       </script>
+  </body>
+</html>

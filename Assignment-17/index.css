@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+/* font-family: 'Fraunces', serif;
+font-family: 'Montserrat', sans-serif; */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+:root{
+    --Darkcyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Verydarkblue: hsl(212, 21%, 14%);
+    --Darkgrayishblue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--Cream);
+
+
+}
+.main_container{
+    width: 600px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    /* text-align: center; */
+    align-items: center;
+    background: var(--White);
+    border-radius: 0 10px 10px 0;
+}
+.information{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+    flex-direction: column;
+    gap: 26px;
+    margin: 20px;
+}
+img{
+    width: 299px;
+    height: 448px;
+    border-radius: 10px 0px 0px 10px;
+}
+.image_phone{
+    display: none;
+}
+
+img.cart{
+    width: 15px;
+    height: 14px;
+}
+button{
+    padding: 16px 77px;
+    color: var(--Cream);
+    border: none;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    background: var(--Darkcyan);
+    border-radius: 7px;
+    /* background-image: linear-gradient(red, yellow, green); */
+}
+.paragraph{
+    color: var(--Darkgrayishblue);
+    font-family: 'Montserrat', sans-serif;
+
+}
+.pre{
+    color: var(--Darkgrayishblue);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    letter-spacing: 6px;
+    margin-right:164px;
+    font-size: 9px;
+}
+.title{
+    color: var(--Verydarkblue);
+    font-family: 'Fraunces', serif;
+    font-size: 35px;
+}
+.price{
+    color: var(--Darkcyan);
+    font-size: 29px;
+    font-family: 'Montserrat', sans-serif;
+    margin-right:50px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 15px;
+}
+.price s{
+    color: var(--Darkgrayishblue);
+    font-size: 14px;
+}
+@media(max-width:610px){
+    .image_destop{
+        display: none;
+    }
+    .image_phone{
+        display: block;
+        width: 352px;
+        height: 246px;
+        border-radius: 10px 10px 0 0;
+    }
+    .main_container{
+        flex-direction: column;
+        width: 355px ;
+        height: 630px;
+    }
+    .information{
+        gap: 29px;
+        border-radius: 0 0 10px 10px;
+    }
+    button{
+        padding: 16px 110px;
+        margin-bottom: 20px;
+    }
+    .price{
+        margin-right: 130px;
+    }
+}
+    

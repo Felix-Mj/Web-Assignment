@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+}
+body{
+    background-color: #333;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    gap: 20px;
+}
+.main h5{
+    color: rgb(100, 73, 255);
+}
+.main h5 span{
+    color: #fff;
+}
+.border{
+    border-radius: 7px;
+    background-color: #fff;
+    padding: 1px 10px;
+    border: 2px solid #fff;
+}
+.border input{
+    border: none;
+    outline: none;
+}
+.border i{
+    color: rgb(60, 82, 160);
+} 
+.border:focus-within{
+    border: 3px solid rgb(71, 196, 196);
+}
+
